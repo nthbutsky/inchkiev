@@ -39,7 +39,7 @@ export default {
     return {
       currentSlide: 1,
       slideCount: null,
-      slideAutoplay: true,
+      slideAutoplay: false,
       timeout: 5000,
     };
   },
@@ -73,16 +73,20 @@ export default {
 .carousel {
   &__btn {
     position: absolute;
-    top: 18rem;
-    left: 87rem;
-    transform: translate(-50%);
+    top: 40%;
+    right: 1rem;
+    transform: translate(-40%);
     cursor: pointer;
+    z-index: 3;
 
     svg {
       fill: white;
       height: auto;
       transform-origin: center;
-      width: 7rem;
+      width: 8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 400;
       animation: rotation infinite 6s linear;
 
       @keyframes rotation {
@@ -97,9 +101,9 @@ export default {
 
     span {
       position: absolute;
-      top: 40%;
+      top: 45%;
       left: 50%;
-      transform: translate(-50%, -40%);
+      transform: translate(-50%, -45%);
       font-size: 40px;
       color: white;
     }
@@ -107,10 +111,11 @@ export default {
 
   &__pagination {
     position: absolute;
-    bottom: 3rem;
-    left: 15rem;
+    bottom: 2rem;
+    left: 0;
     height: 60px;
     width: 120px;
+    margin-left: 10rem;
     border-radius: 50%;
     border: 2px solid white;
 

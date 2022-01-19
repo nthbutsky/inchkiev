@@ -9,25 +9,29 @@
             background: slide.color,
           }"
         >
-          <div class="slide-info__oval-one"></div>
-          <div class="slide-info__oval-two"></div>
-          <div class="slide-info__oval-three">
-            <img :src="require(`./assets/dog.jpg`)" alt="Dog" />
+          <div class="slide-info__left-side-wrapper">
+            <div class="slide-info__oval-four"></div>
+            <img
+              class="slide-info__star-thing"
+              :src="require(`./assets/star.svg`)"
+              alt="Star"
+            />
+            <p class="slide-info__top-text">lorem ipsum dolor, sit amet</p>
+            <p class="slide-info__text-line-one">lorem ipsum</p>
+            <p class="slide-info__text-line-two">lorem ipsum dolor -</p>
+            <p class="slide-info__text-line-three">lorem</p>
+            <p class="slide-info__text-line-four">ipsum!</p>
+            <p class="slide-info__bottom-text">
+              lorem ipsum dolor sit, amet consectetur adipisicing elit
+            </p>
           </div>
-          <div class="slide-info__oval-four"></div>
-          <img
-            class="slide-info__star-thing"
-            :src="require(`./assets/star.svg`)"
-            alt="Star"
-          />
-          <p class="slide-info__top-text">lorem ipsum dolor, sit amet</p>
-          <p class="slide-info__text-line-one">lorem ipsum</p>
-          <p class="slide-info__text-line-two">lorem ipsum dolor -</p>
-          <p class="slide-info__text-line-three">lorem</p>
-          <p class="slide-info__text-line-four">ipsum!</p>
-          <p class="slide-info__bottom-text">
-            lorem ipsum dolor sit, amet consectetur adipisicing elit
-          </p>
+          <div class="slide-info__right-side-wrapper">
+            <div class="slide-info__oval-one"></div>
+            <div class="slide-info__oval-two"></div>
+            <div class="slide-info__oval-three">
+              <img :src="require(`./assets/dog.jpg`)" alt="Dog" />
+            </div>
+          </div>
         </div>
       </Slide>
     </Carousel>
@@ -89,11 +93,26 @@ export default {
   border-bottom-right-radius: 5.625rem;
   color: white;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__right-side-wrapper {
+    position: relative;
+    z-index: 1;
+    max-height: 700px;
+  }
+
+  &__left-side-wrapper {
+    position: relative;
+    z-index: 2;
+    max-height: 700px;
+  }
 
   &__oval-one {
     position: absolute;
     bottom: 3rem;
-    left: 67rem;
+    right: 16rem;
     display: inline-block;
     height: 27.5rem;
     width: 13.4375rem;
@@ -105,7 +124,7 @@ export default {
   &__oval-two {
     position: absolute;
     bottom: 12rem;
-    left: 69rem;
+    right: 14rem;
     display: inline-block;
     height: 27.5rem;
     width: 13.4375rem;
@@ -117,7 +136,7 @@ export default {
   &__oval-three {
     position: absolute;
     bottom: 3rem;
-    left: 60rem;
+    right: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,6 +231,25 @@ export default {
     width: 43.75rem;
     line-height: 1.375rem;
     padding: 3.125rem 0 0 28.125rem;
+  }
+
+  @media (max-width: 1440px) {
+    .slide-info__oval-one,
+    .slide-info__oval-two,
+    .slide-info__oval-three {
+      height: 300px;
+      width: 170px;
+    }
+
+    .slide-info__oval-three img {
+      height: 80%;
+    }
+
+    .slide-info__text-line-one,
+    .slide-info__text-line-two,
+    .slide-info__text-line-tree {
+      font-size: 3rem;
+    }
   }
 }
 </style>
