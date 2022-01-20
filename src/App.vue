@@ -36,6 +36,7 @@
       </Slide>
     </Carousel>
     <Form />
+    <Movies />
   </div>
 </template>
 
@@ -43,12 +44,14 @@
 import Carousel from "./components/Carousel.vue";
 import Slide from "./components/Slide.vue";
 import Form from "./components/Form.vue";
+import Movies from "./components/Movies.vue";
 
 export default {
   components: {
     Carousel,
     Slide,
     Form,
+    Movies,
   },
 
   data() {
