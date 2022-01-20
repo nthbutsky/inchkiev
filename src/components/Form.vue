@@ -256,8 +256,13 @@ export default {
   textarea {
     display: block;
     width: 15.625rem;
-    height: 1.875rem;
+    height: 30px;
     margin-bottom: 0.9375rem;
+
+    &:focus {
+      outline: none;
+      border: 2px solid #027d84;
+    }
   }
 
   input[type="radio"] {
@@ -267,11 +272,19 @@ export default {
   input[type="submit"] {
     display: block;
     width: 15.625rem;
-    background: #464646;
+    height: 2.5rem;
+    background: #4a989a;
     color: white;
-    font-size: 1.375rem;
-    margin-top: 3.4375rem;
+    font-size: 1.125rem;
+    margin-top: 2.8125rem;
     cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #027d84;
+    }
   }
 
   label {

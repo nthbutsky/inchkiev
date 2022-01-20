@@ -106,10 +106,14 @@ export default {
 .movies {
   width: 75%;
   height: 400px;
-  background: rgb(199, 199, 199);
+  background: #4a989a;
   padding: 20px;
   margin: 20px auto;
   display: flex;
+
+  &:hover .movies__img img {
+    transform: scale(1.1);
+  }
 
   &__img {
     height: 100%;
@@ -120,6 +124,7 @@ export default {
 
     img {
       height: 100%;
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -145,6 +150,10 @@ export default {
 
     input {
       margin: 10px 10px 20px 0;
+    }
+
+    label:hover {
+      text-decoration: underline;
     }
   }
 }
