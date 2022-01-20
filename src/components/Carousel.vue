@@ -33,13 +33,11 @@
 
 <script>
 export default {
-  name: "carousel",
-
   data() {
     return {
       currentSlide: 1,
       slideCount: null,
-      slideAutoplay: false,
+      slideAutoplay: true,
       timeout: 5000,
     };
   },

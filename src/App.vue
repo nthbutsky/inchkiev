@@ -35,18 +35,20 @@
         </div>
       </Slide>
     </Carousel>
+    <Form />
   </div>
 </template>
 
 <script>
 import Carousel from "./components/Carousel.vue";
 import Slide from "./components/Slide.vue";
+import Form from "./components/Form.vue";
 
 export default {
-  name: "App",
   components: {
     Carousel,
     Slide,
+    Form,
   },
 
   data() {
